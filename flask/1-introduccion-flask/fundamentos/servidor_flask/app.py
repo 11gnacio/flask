@@ -23,6 +23,10 @@ def repetir_mensaje(veces, mensaje):
 def pagina_no_encontrada(error):
     # Devolvemos el mensaje personalizado y el código de estado 404
     return "¡Sobrecarga de rutas! No encontramos a dónde quieres ir, inténtalo de nuevo.", 404
+#presentación
+@app.route('/despedida/<name>')
+def despedida(name):
+   return f'¡Hasta luego {name}! ¡Esperamos verte pronto!'
 # Ejecuta el servidor
 if __name__ == "__main__":
    app.run(debug=True)
